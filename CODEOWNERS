@@ -1,0 +1,6 @@
+# Default: platform owns the repo glue
+*                       @kestrel/platform-team
+/booking/               @kestrel/booking-team
+/pricing/               @kestrel/pricing-team
+/gateway/               @kestrel/platform-team
+/booking/src/main/resources/db/   @kestrel/booking-team @kestrel/platform-team
