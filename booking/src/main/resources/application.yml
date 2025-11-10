@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: kestrel-booking
+  datasource:
+    url: ${BOOKING_DB_URL:jdbc:postgresql://localhost:5432/booking}
+    username: ${BOOKING_DB_USER:booking}
+    password: ${BOOKING_DB_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/schema.sql
+      data-locations: classpath:db/data.sql
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+    default-property-inclusion: always
+  mvc:
+    problemdetails:
+      enabled: true
+
+server:
+  port: 8081
+  shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+logging:
+  pattern:
+    level: "%5p [%X{request_id:-}]"
+
+kestrel:
+  booking:
+    lock:
+      enabled: true
+    features:
+      eta-confidence: true
+    ratelimit:
+      per-carrier-rps: 20
+      burst-seconds: 2
+      overrides:
+        PCR: 8
