@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:booking-${random.uuid};MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+kestrel:
+  booking:
+    lock:
+      enabled: true
+    features:
+      eta-confidence: true
+    ratelimit:
+      per-carrier-rps: 100
+      burst-seconds: 2
