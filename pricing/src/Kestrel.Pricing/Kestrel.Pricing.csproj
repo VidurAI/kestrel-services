@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Kestrel.Pricing</RootNamespace>
+    <AssemblyName>Kestrel.Pricing</AssemblyName>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Tariffs\Data\tariffs.csv" LogicalName="tariffs.csv" />
+    <EmbeddedResource Include="Tariffs\Data\tariffs.legacy.txt" LogicalName="tariffs.legacy.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Kestrel.Pricing.Tests" />
+  </ItemGroup>
+
+</Project>
