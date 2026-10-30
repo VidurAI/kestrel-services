@@ -1,0 +1,35 @@
+{
+  "mcpServers": {
+    "serena": {
+      "type": "local",
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena@ede329aaf0c824bea75455a2926f01420d7aa620",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        ".serena/adlc-context.yml",
+        "--agent-interface",
+        "tools",
+        "--project-from-cwd",
+        "--enable-web-dashboard",
+        "false",
+        "--enable-gui-log-window",
+        "false"
+      ],
+      "tools": [
+        "find_symbol",
+        "find_referencing_symbols",
+        "get_symbols_overview",
+        "find_implementations",
+        "get_diagnostics_for_file",
+        "replace_symbol_body",
+        "insert_after_symbol",
+        "insert_before_symbol",
+        "read_memory",
+        "list_memories"
+      ]
+    }
+  }
+}

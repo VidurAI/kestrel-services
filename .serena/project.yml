@@ -1,0 +1,4 @@
+# Kit-owned skeleton (adlc init); teams may add language servers.
+project_name: "kestrel-services"
+language_servers: ["csharp", "java", "python"]
+encoding: "utf-8"
