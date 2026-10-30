@@ -9,7 +9,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cb85a363`
+- Built from commit: `9f4a46b7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -319,13 +319,13 @@ Nodes (3): encoding, language_servers, project_name
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `CarrierCatalog` connect `Community 22` to `Community 34`, `Community 5`, `Community 41`, `Community 9`, `Community 11`, `Community 13`, `Community 17`, `Community 27`?**
-  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+  _High betweenness centrality (0.039) - this node is a cross-community bridge._
 - **What connects `CarrierCode`, `Code`, `Order` to the rest of the system?**
   _58 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.062206572769953054 - nodes in this community are weakly interconnected._
 - **Why does `CreateShipmentRequest` connect `Community 8` to `Community 2`, `Community 34`, `Community 9`, `Community 13`, `Community 17`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.06078316773816481 - nodes in this community are weakly interconnected._
 - **Why does `CarrierRateLimiter` connect `Community 14` to `Community 11`, `Community 41`, `Community 27`?**
