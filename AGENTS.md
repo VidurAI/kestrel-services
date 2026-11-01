@@ -58,5 +58,5 @@ adlc:
   artifact: graphify-out/graph.json
   sensitive: []
   freshness: two-tier
-  kit: 0.1.0
+  kit: 0.1.3
 ```
